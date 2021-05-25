@@ -21,7 +21,7 @@ aliases:
   - &install-dependencies
     run:
       name: install dependencies
-      command: npm install
+      command: npm install -g
 
   - &save-cache
     save_cache:
