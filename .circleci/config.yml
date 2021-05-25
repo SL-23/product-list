@@ -57,7 +57,8 @@ jobs:
           name: Run prettier
           command: npm run prettier:check
   test:
-    executor: app-executor
+    executor:
+      name: node/default
     steps:
       - checkout
       - *show-current-branch-name
