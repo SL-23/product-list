@@ -37,7 +37,7 @@ jobs:
       - *show-current-branch-name
       - *restore-cache
       - *install-dependencies
-   linting:
+  linting:
     executor: app-executor
     steps:
       - checkout
