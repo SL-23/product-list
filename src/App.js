@@ -1,10 +1,12 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import Layout from './hoc/Layout';
 
-const App = () => {
+const App = (props) => {
   return (
-    <div>
-      hello
-    </div>
+   <div>
+     <Layout/>
+   </div>
   );
 };
 
