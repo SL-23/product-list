@@ -8,7 +8,7 @@ const ProdcutView = (props) => {
   const renderCards = (productList) => (
     productList
       ? productList.map((product, i) => (
-        <ProductCard key={i}/>
+        <ProductCard key={i} {...product}/>
       ))
       : null
   );

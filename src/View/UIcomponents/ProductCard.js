@@ -2,19 +2,18 @@ import React from 'react';
 import ProductImg from './ProductImg';
 import ProductInfo from './ProductInfo';
 
-class ProductCard extends React.Component {
-  render() {
-    return (
+const ProductCard = (props) => {
+  console.log(props.productName);
+  return (
         <div>
           <div>placeholder</div>
           <div>placeholder</div>
           <div>placeholder</div>
           <div>placeholder</div>
           <ProductImg productImage='defaultImg.gif'/>
-          <ProductInfo productName='name' price='$4.99'/>
+          <ProductInfo productName={props.productName} price={props.price}/>
         </div>
-    );
-  }
+  );
 };
 
 export default ProductCard;
