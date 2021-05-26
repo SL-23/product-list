@@ -8,8 +8,8 @@ class ProductProvider extends React.Component {
     super(props);
     // get data stored in Model
     const productModel = new ProductModel();
+    // transform model information into values that can be displayed on a view
     this.productViewModel = new ProductViewModel(productModel.data);
-    console.log(productModel.data);
   }
 
   render() {
