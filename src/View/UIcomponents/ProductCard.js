@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductImg from './ProductImg';
+import ProductInfo from './ProductInfo';
 
 class ProductCard extends React.Component {
   render() {
@@ -9,7 +10,8 @@ class ProductCard extends React.Component {
           <div>placeholder</div>
           <div>placeholder</div>
           <div>placeholder</div>
-          <ProductImg image='defaultImg.gif'/>
+          <ProductImg productImage='defaultImg.gif'/>
+          <ProductInfo productName='name' price='$4.99'/>
         </div>
     );
   }
