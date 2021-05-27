@@ -3,17 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.12.0",
+    "@material-ui/core": "^4.11.4",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-standard": "^5.0.0",
+    "formik": "^2.2.8",
+    "linting": "^1.0.0",
+    "mobx": "^6.3.2",
+    "prettier": "^2.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint 'src/**/*.js*'",
+    "prettier:check": "prettier --check 'src/**/*.{js,jsx,json}' ",
+    "prettier:write": "prettier --write 'src/**/*.{js,jsx,json}' ",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -34,5 +44,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/eslint-parser": "^7.14.3",
+    "@testing-library/jest-dom": "^5.12.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "prettier": "^2.3.0"
   }
 }
