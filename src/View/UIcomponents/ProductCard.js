@@ -4,12 +4,11 @@ import ProductInfo from './ProductInfo';
 import SaleIcon from './SaleIcon';
 
 const ProductCard = (props) => {
-  console.log(props.productImage);
   return (
-    <div>
+    <div className='card_item_wrapper'>
       {props.isSale ? <SaleIcon /> : null}
-      <ProductImg className="image" productImage={props.productImage} />
-      <ProductInfo className="tags" productName={props.productName} price={props.price} />
+      <ProductImg productImage={props.productImage} />
+      <ProductInfo productName={props.productName} price={props.price} />
     </div>
   );
 };

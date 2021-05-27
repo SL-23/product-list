@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SaleIcon = () => {
-  return <button className="sale_icon">SALE</button>;
+  return <div className="sale_icon">SALE</div>;
 };
 
 export default SaleIcon;
