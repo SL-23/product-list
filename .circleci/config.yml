@@ -71,27 +71,27 @@ workflows:
   build-and-tests:
     jobs:
       - build
-      # - linting:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only:
-      #           - develop
-      #           - main
-      # - prettier:
-      #     requires:
-      #       - build
-      #     filters:
-      #       branches:
-      #         only:
-      #           - develop
-      #           - main
-      # - test:
-      #     requires:
-      #       - linting
-      #     filters:
-      #       branches:
-      #         only:
-      #           - develop
-      #           - main
+      - linting:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - develop
+                - main
+      - prettier:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - develop
+                - main
+      - test:
+          requires:
+            - linting
+          filters:
+            branches:
+              only:
+                - develop
+                - main

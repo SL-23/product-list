@@ -6,7 +6,7 @@ import SaleIcon from './SaleIcon';
 const ProductCard = (props) => {
   return (
     <div className="card_item_wrapper">
-      {props.isSale ? <SaleIcon /> : null}
+      {props.isSale === 'true' ? <SaleIcon /> : null}
       <ProductImg productImage={props.productImage} />
       <ProductInfo productName={props.productName} price={props.price} />
     </div>
