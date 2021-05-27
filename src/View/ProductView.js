@@ -16,13 +16,17 @@ class ProductView extends React.Component {
 
   handleFilter(e) {
     const filterType = e.target.value;
-    const filteredList = [];
+    let filteredList = [];
     // every time should gain the list from props, because list in state is already filtered
     const productList = this.props.productList;
-    productList.map((product, i) => {
-      if (product.type === filterType) filteredList.push(product);
-      return filteredList;
-    });
+    if (filterType === 'All') {
+      filteredList = productList;
+    } else {
+      productList.map((product, i) => {
+        if (product.type === filterType) filteredList.push(product);
+        return filteredList;
+      });
+    }
 
     console.log(filteredList);
 
@@ -39,7 +43,7 @@ class ProductView extends React.Component {
               <select
                 style={{ marginTop: 100 }}
                 onChange={e => this.handleFilter(e)}>
-                <option value="all">all</option>
+                <option value="All">All</option>
                 <option value="Wine">Wine</option>
                 <option value="Beer">Beer</option>
                 <option value="Spirits">Spirits</option>
