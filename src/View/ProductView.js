@@ -6,20 +6,24 @@ import { TextField } from '@material-ui/core';
 
 class ProductView extends React.Component {
   state = {
-    productList: []
+    productList: [],
+    filteredResList: [],
+    searchResList: []
   };
 
   componentDidMount() {
     this.setState({
-      productList: this.props.productList
+      productList: this.props.productList,
+      filteredResList: this.props.productList,
+      searchResList: this.props.productList
     });
   }
 
   handleFilter = (e) => {
     const filterType = e.target.value;
     let filteredList = [];
-    // every time should gain the list from props, because list in state is already filtered
-    const productList = this.props.productList;
+    // in case search is applied: the result list of this function should meet both search and filter condition
+    const productList = this.state.searchResList;
     if (filterType === 'All') {
       filteredList = productList;
     } else {
@@ -30,14 +34,15 @@ class ProductView extends React.Component {
     }
 
     this.setState({
-      productList: filteredList
+      productList: filteredList,
+      filteredResList: filteredList
     });
   };
 
   handleSearch = (e) => {
     const keyword = e.target.value;
     const resultList = [];
-    const productList = this.props.productList;
+    const productList = this.state.filteredResList;
     // use toLowerCase to enable capital insensitive search
     productList.map((product, i) => {
       const name = product.productName.toLowerCase();
@@ -46,7 +51,8 @@ class ProductView extends React.Component {
     });
 
     this.setState({
-      productList: resultList
+      productList: resultList,
+      searchResList: resultList
     });
   };
 
