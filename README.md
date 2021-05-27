@@ -54,7 +54,7 @@ View Models: transform product list from model into values that can be displayed
 
 CICD: CircleCI (Workflow: build -> style check -> test)\
 Coding style: Eslint & Prettier\
-Test: Jest\
+Test: Jest
 
 # Getting Started with Create React App
 
