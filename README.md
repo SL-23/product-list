@@ -1,9 +1,11 @@
 # Product list based on MVVM framework
 - Build from scratch using no external scaffold and limited dependencies
 - Workflow is built to automate style checking and unit testing
+
 ## Functions:
 - Case-insensitive search (result = products whose name contains keyword pattern)
 - Filter by type (result = product whose type equals to filter option)
+
 ## To start
 
 `npm install`\
@@ -51,8 +53,7 @@ View Models: transform product list from model into values that can be displayed
     └── setupTests.js
 
 ## Tools
-
-CICD: CircleCI (Workflow: build -> style check -> test)\
+CI/CD: CircleCI (Workflow: build -> style check -> test)\
 Coding style: Eslint & Prettier\
 Test: Jest
 
