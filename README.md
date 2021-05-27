@@ -1,47 +1,49 @@
 # Product list based on MVVM framework
 ## To start
 
-`npm install`
-`npm start`
+`npm install`.\
+`npm start`.\
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Design
 
-Models: hold application data
-Views: display visual elements and controls on the screen.
-View Models: transform model information into values that can be displayed on a view.
+Models: hold product data.\
+Views: visualise product information and controls on the screen.\
+View Models: transform product list from model into values that can be displayed on a view.\
 
 ## Directory Tree
 
-├── README.md
-├── package-lock.json
-├── package.json
-└── src
-    ├── App.js
-    ├── Controller
-    │   └── ProductController.js
-    ├── Model
-    │   └── ProductModel.js
-    ├── ProductProvider.js
-    ├── Resources
-    │   ├── css
-    │   │   └── app.css
-    │   └── data
-    │       └── ProductData.json
-    ├── View
-    │   ├── ProductView.js
-    │   ├── ProductView.test.js
-    │   └── UIcomponents
-    │       ├── Footer.js
-    │       ├── Header.js
-    │       ├── ProductCard.js
-    │       ├── ProductCardBlock.js
-    │       ├── ProductImg.js
-    │       ├── ProductInfo.js
-    │       └── SaleIcon.js
-    ├── ViewModel
-    │   └── ProductViewModel.js
-    ├── index.js
-    └── setupTests.js
+├── README.md.\
+├── package-lock.json.\
+├── package.json.\
+└── src.\
+    ├── App.js.\
+    ├── Controller.\
+    │   └── ProductController.js.\
+    ├── Model.\
+    │   └── ProductModel.js.\
+    ├── ProductProvider.js.\
+    ├── Resources.\
+    │   ├── css.\
+    │   │   └── app.css.\
+    │   └── data.\
+    │       └── ProductData.json.\
+    ├── View.\
+    │   ├── ProductView.js.\
+    │   ├── ProductView.test.js.\
+    │   └── UIcomponents.\
+    │       ├── Footer.js.\
+    │       ├── Header.js.\
+    │       ├── ProductCard.js.\
+    │       ├── ProductCardBlock.js.\
+    │       ├── ProductImg.js.\
+    │       ├── ProductInfo.js.\
+    │       └── SaleIcon.js.\
+    ├── ViewModel.\
+    │   └── ProductViewModel.js.\
+    ├── index.js.\
+    └── setupTests.js.\
 
 ## Tools
 
