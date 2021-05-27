@@ -3,6 +3,7 @@ import Header from './UIcomponents/Header';
 import Footer from './UIcomponents/Footer';
 import ProductCardBlock from './UIcomponents/ProductCardBlock';
 import SearchBar from './UIcomponents/SearchBar';
+import { TextField } from '@material-ui/core';
 
 class ProductView extends React.Component {
   state = {
@@ -15,7 +16,7 @@ class ProductView extends React.Component {
     });
   }
 
-  handleFilter(e) {
+  handleFilter = (e) => {
     const filterType = e.target.value;
     let filteredList = [];
     // every time should gain the list from props, because list in state is already filtered
@@ -29,10 +30,23 @@ class ProductView extends React.Component {
       });
     }
 
-    console.log(filteredList);
-
     this.setState({
       productList: filteredList
+    });
+  }
+
+  handleSearch = (e) => {
+    const keyword = e.target.value;
+    const resultList = [];
+    const productList = this.props.productList;
+    productList.map((product, i) => {
+      const name = product.productName.toLowerCase();
+      if (name.includes(keyword.toLowerCase())) resultList.push(product);
+      return resultList;
+    });
+
+    this.setState({
+      productList: resultList
     });
   }
 
@@ -55,7 +69,13 @@ class ProductView extends React.Component {
               </select>
               <br></br>
               <br></br>
-              <SearchBar/>
+              <TextField
+              className='container'
+              placeholder="Search for something"
+              name="keywords"
+              variant="outlined"
+              onChange={e => this.handleSearch(e)}
+              />
               <ProductCardBlock productList={this.state.productList}/>
             </div>
             <Footer/>
