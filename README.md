@@ -1,49 +1,49 @@
 # Product list based on MVVM framework
 ## To start
 
-`npm install`.\
-`npm start`.\
-Runs the app in the development mode.\
+`npm install`\
+`npm start`\
+Runs the app in the development mode\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Design
 
-Models: hold product data.\
-Views: visualise product information and controls on the screen.\
-View Models: transform product list from model into values that can be displayed on a view.\
+Models: hold product data\
+Views: visualise product information and controls on the screen\
+View Models: transform product list from model into values that can be displayed on a view.
 
 ## Directory Tree
 
-├── README.md.\
-├── package-lock.json.\
-├── package.json.\
-└── src.\
-    ├── App.js.\
-    ├── Controller.\
-    │   └── ProductController.js.\
-    ├── Model.\
-    │   └── ProductModel.js.\
-    ├── ProductProvider.js.\
-    ├── Resources.\
-    │   ├── css.\
-    │   │   └── app.css.\
-    │   └── data.\
-    │       └── ProductData.json.\
-    ├── View.\
-    │   ├── ProductView.js.\
-    │   ├── ProductView.test.js.\
-    │   └── UIcomponents.\
-    │       ├── Footer.js.\
-    │       ├── Header.js.\
-    │       ├── ProductCard.js.\
-    │       ├── ProductCardBlock.js.\
-    │       ├── ProductImg.js.\
-    │       ├── ProductInfo.js.\
-    │       └── SaleIcon.js.\
-    ├── ViewModel.\
-    │   └── ProductViewModel.js.\
-    ├── index.js.\
-    └── setupTests.js.\
+├── README.md\
+├── package-lock.json\
+├── package.json\
+└── src\
+    ├── App.js\
+    ├── Controller\
+    │   └── ProductController.js\
+    ├── Model\
+    │   └── ProductModel.js\
+    ├── ProductProvider.js\
+    ├── Resources\
+    │   ├── css\
+    │   │   └── app.css\
+    │   └── data\
+    │       └── ProductData.json\
+    ├── View\
+    │   ├── ProductView.js\
+    │   ├── ProductView.test.js\
+    │   └── UIcomponents\
+    │       ├── Footer.js\
+    │       ├── Header.js\
+    │       ├── ProductCard.js\
+    │       ├── ProductCardBlock.js\
+    │       ├── ProductImg.js\
+    │       ├── ProductInfo.js\
+    │       └── SaleIcon.js\
+    ├── ViewModel\
+    │   └── ProductViewModel.js\
+    ├── index.js\
+    └── setupTests.js
 
 ## Tools
 
@@ -61,23 +61,23 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits\
 You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames include the hashes\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
