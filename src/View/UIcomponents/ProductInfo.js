@@ -5,7 +5,7 @@ class ProductInfo extends React.Component {
   render() {
     const { productName, price } = this.props;
     return (
-      <div className='tags'>
+      <div className="tags">
         <h4 className="name">
           <span>{productName}</span>
         </h4>

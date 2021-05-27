@@ -67,6 +67,7 @@ class ProductView extends React.Component {
             <option value="Wine">Wine</option>
             <option value="Beer">Beer</option>
             <option value="Spirits">Spirits</option>
+            <option value="Cider">Cider</option>
           </select>
           <br></br>
           <br></br>
