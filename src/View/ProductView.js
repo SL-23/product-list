@@ -1,26 +1,55 @@
 import React from 'react';
 import Header from './UIcomponents/Header';
 import Footer from './UIcomponents/Footer';
-import ProductCard from './UIcomponents/ProductCard';
+import ProductCardBlock from './UIcomponents/ProductCardBlock';
 
-const ProdcutView = (props) => {
-  console.log(props);
-  const renderCards = (productList) => (
-    productList
-      ? productList.map((product, i) => (
-        <ProductCard key={i} {...product}/>
-      ))
-      : null
-  );
-  return (
-      <div>
-          <Header/>
-          {
-            renderCards(props.productList)
-          }
-          <Footer/>
-      </div>
-  );
+class ProductView extends React.Component {
+  state = {
+    productList: []
+  };
+
+  componentDidMount() {
+    this.setState({
+      productList: this.props.productList
+    });
+  }
+
+  handleFilter(e) {
+    const filterType = e.target.value;
+    const filteredList = [];
+    // every time should gain the list from props, because list in state is already filtered
+    const productList = this.props.productList;
+    productList.map((product, i) => {
+      if (product.type === filterType) filteredList.push(product);
+      return filteredList;
+    });
+
+    console.log(filteredList);
+
+    this.setState({
+      productList: filteredList
+    });
+  }
+
+  render() {
+    return (
+        <div>
+            <Header/>
+            <div className='container'>
+              <select
+                style={{ marginTop: 100 }}
+                onChange={e => this.handleFilter(e)}>
+                <option value="all">all</option>
+                <option value="Wine">Wine</option>
+                <option value="Beer">Beer</option>
+                <option value="Spirits">Spirits</option>
+              </select>
+              <ProductCardBlock productList={this.state.productList}/>
+            </div>
+            <Footer/>
+        </div>
+    );
+  }
 };
 
-export default ProdcutView;
+export default ProductView;

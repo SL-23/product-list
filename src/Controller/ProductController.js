@@ -1,9 +1,10 @@
 import React from 'react';
-import ProdcutView from '../View/ProductView';
+import ProductView from '../View/ProductView';
 
-const ProductController = (props) => {
-  console.log(props);
-  return <ProdcutView productList={props.viewModel.productList}/>;
+class ProductController extends React.Component {
+  render() {
+    return <ProductView productList={this.props.viewModel.productList}/>;
+  }
 };
 
 export default ProductController;
