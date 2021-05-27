@@ -7,7 +7,7 @@ class Header extends Component {
   render() {
     return (
       <AppBar
-        position='fixed'
+        position="fixed"
         style={{
           backgroundColor: '#98c5e9',
           boxShadow: 'none',
@@ -15,10 +15,8 @@ class Header extends Component {
           borderButtom: '2px solid #00285e'
         }}
       >
-        <Toolbar style={{ display: 'flex' }} >
-          <Typography variant="h4">
-            Product list
-          </Typography>
+        <Toolbar style={{ display: 'flex' }}>
+          <Typography variant="h4">Product list</Typography>
         </Toolbar>
       </AppBar>
     );

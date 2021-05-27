@@ -13,9 +13,7 @@ class ProductProvider extends React.Component {
   }
 
   render() {
-    return (
-            <ProductController viewModel={this.productViewModel}/>
-    );
+    return <ProductController viewModel={this.productViewModel} />;
   }
 }
 

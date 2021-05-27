@@ -4,9 +4,9 @@ import ProductProvider from './ProductProvider';
 
 const App = (props) => {
   return (
-   <div>
-     <ProductProvider/>
-   </div>
+    <div>
+      <ProductProvider />
+    </div>
   );
 };
 
