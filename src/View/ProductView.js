@@ -51,7 +51,7 @@ class ProductView extends React.Component {
 
   render() {
     return (
-      <div data-testid='product_view'>
+      <div data-testid="product_view">
         <Header />
         <div className="container">
           <select
