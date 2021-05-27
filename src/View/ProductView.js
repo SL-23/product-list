@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './UIcomponents/Header';
 import Footer from './UIcomponents/Footer';
 import ProductCardBlock from './UIcomponents/ProductCardBlock';
+import SearchBar from './UIcomponents/SearchBar';
 
 class ProductView extends React.Component {
   state = {
@@ -41,13 +42,20 @@ class ProductView extends React.Component {
             <Header/>
             <div className='container'>
               <select
-                style={{ marginTop: 100 }}
+                className='container'
+                style={{
+                  marginTop: 100,
+                  padding: '5px 0px 5px 0px'
+                }}
                 onChange={e => this.handleFilter(e)}>
                 <option value="All">All</option>
                 <option value="Wine">Wine</option>
                 <option value="Beer">Beer</option>
                 <option value="Spirits">Spirits</option>
               </select>
+              <br></br>
+              <br></br>
+              <SearchBar/>
               <ProductCardBlock productList={this.state.productList}/>
             </div>
             <Footer/>

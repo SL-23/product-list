@@ -1,7 +1,6 @@
 import React from 'react';
 import { Formik, useFormik } from 'formik';
 import * as Yup from 'yup';
-import { errorHelper } from 'utils/tools';
 import {
   TextField
 } from '@material-ui/core';
@@ -32,7 +31,6 @@ const SearchBar = (props) => {
                         name="keywords"
                         variant="outlined"
                         {...formik.getFieldProps('keywords')}
-                        {...errorHelper(formik, 'keywords')}
                     />
                 </div>
             </form>
