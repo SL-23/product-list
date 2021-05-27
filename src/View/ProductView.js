@@ -38,6 +38,7 @@ class ProductView extends React.Component {
     const keyword = e.target.value;
     const resultList = [];
     const productList = this.props.productList;
+    // use toLowerCase to enable capital insensitive search
     productList.map((product, i) => {
       const name = product.productName.toLowerCase();
       if (name.includes(keyword.toLowerCase())) resultList.push(product);

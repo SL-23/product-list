@@ -1,9 +1,8 @@
 import React from 'react';
 import ProductImg from './ProductImg';
 
-class ProductInfo extends React.Component {
-  render() {
-    const { productName, price } = this.props;
+const ProductInfo = (props) => {
+    const { productName, price } = props;
     return (
       <div className="tags">
         <h4 className="name">
@@ -14,7 +13,6 @@ class ProductInfo extends React.Component {
         </h4>
       </div>
     );
-  }
-}
+};
 
 export default ProductInfo;

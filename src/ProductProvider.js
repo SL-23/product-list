@@ -13,6 +13,7 @@ class ProductProvider extends React.Component {
   }
 
   render() {
+    // pass the view model to controller which communicates with view
     return <ProductController viewModel={this.productViewModel} />;
   }
 }
