@@ -1,4 +1,7 @@
 # Product list based on MVVM framework
+- Build from scratch using no external scaffold and limited dependencies
+- Workflow is built to automate style checking and unit testing
+ 
 ## To start
 
 `npm install`\
@@ -47,8 +50,8 @@ View Models: transform product list from model into values that can be displayed
 
 ## Tools
 
-CICD: CircleCI (Workflow: build -> style check -> test)
-Coding style: Eslint & Prettier
+CI/CD: CircleCI (Workflow: build -> style check -> test)\
+Coding style: Eslint & Prettier\
 Test: Jest
 
 # Getting Started with Create React App
