@@ -1,3 +1,54 @@
+# Product list based on MVVM framework
+## To start
+
+`npm install`
+`npm start`
+
+## Design
+
+Models: hold application data
+Views: display visual elements and controls on the screen.
+View Models: transform model information into values that can be displayed on a view.
+
+## Directory Tree
+
+├── README.md
+├── package-lock.json
+├── package.json
+└── src
+    ├── App.js
+    ├── Controller
+    │   └── ProductController.js
+    ├── Model
+    │   └── ProductModel.js
+    ├── ProductProvider.js
+    ├── Resources
+    │   ├── css
+    │   │   └── app.css
+    │   └── data
+    │       └── ProductData.json
+    ├── View
+    │   ├── ProductView.js
+    │   ├── ProductView.test.js
+    │   └── UIcomponents
+    │       ├── Footer.js
+    │       ├── Header.js
+    │       ├── ProductCard.js
+    │       ├── ProductCardBlock.js
+    │       ├── ProductImg.js
+    │       ├── ProductInfo.js
+    │       └── SaleIcon.js
+    ├── ViewModel
+    │   └── ProductViewModel.js
+    ├── index.js
+    └── setupTests.js
+
+## Tools
+
+CICD: CircleCI (Workflow: build -> style check -> test)
+Coding style: Eslint & Prettier
+Test: Jest
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
