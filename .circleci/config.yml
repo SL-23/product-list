@@ -58,14 +58,14 @@ jobs:
           command: npm run prettier:check
   test:
     executor:
-      name: node/default
+      name: app-executor
     steps:
       - checkout
       - *show-current-branch-name
       - *restore-cache
       - run:
           name: Run test
-          command: npm test
+          command: npm run test -- --watchAll=false
 
 workflows:
   build-and-tests:

@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './UIcomponents/Header';
 import Footer from './UIcomponents/Footer';
 import ProductCardBlock from './UIcomponents/ProductCardBlock';
-import SearchBar from './UIcomponents/SearchBar';
 import { TextField } from '@material-ui/core';
 
 class ProductView extends React.Component {
@@ -52,7 +51,7 @@ class ProductView extends React.Component {
 
   render() {
     return (
-      <div>
+      <div data-testid='product_view'>
         <Header />
         <div className="container">
           <select
